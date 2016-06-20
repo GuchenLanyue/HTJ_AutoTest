@@ -17,7 +17,7 @@ import com.appium.htj.utils.SelectDriver;
 
 import io.appium.java_client.AppiumDriver;
 /**
- * @author wangyang
+ * @author Sam
  * @description 启动和结束测试，以及数据提供者，提供测试数据
  * */
 public class BasePrepare {
