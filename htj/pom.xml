@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.young</groupId>
-	<artifactId>appiumcombat</artifactId>
+	<groupId>com.appium</groupId>
+	<artifactId>htj</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>appiumcombat</name>
-	<description>APPIUM实战Android篇</description>
+	<name>htj</name>
+	<description>黄太吉appium自动化测试</description>
 
 	<dependencies>
 		<dependency>
