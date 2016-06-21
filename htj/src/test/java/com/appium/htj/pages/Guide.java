@@ -22,6 +22,10 @@ public class Guide {
 //	 /**图片故事*/
 //	 public static final By HP_LINK_STORY = By.id("com.microsoft.bing:id/opal_home_picture_story_text1");
 	 
-	 /**引导页*/
-	 public static final By Guide_image_p = By.className("android.widget.ImageView");
+	 /**引导页ViewPager*/
+	 public static final By Guide_image_pager = By.id("com.huangtaiji.client:id/vPager");
+	 
+	 /**引导页图片*/
+	 public static final By Guide_image_image = By.xpath("//android.support.v4.view.ViewPager/android.widget.ImageView");
+	//WebElement el = driver.findElement(By.xpath("//*[@text='Add Contact']"));
 }

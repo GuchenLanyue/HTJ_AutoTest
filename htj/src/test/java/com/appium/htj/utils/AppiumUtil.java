@@ -326,6 +326,12 @@ public class AppiumUtil {
 		
 	}
 	
+	/**判断元素是否显示*/
+	public boolean elementIsdisplayed(By by){
+		WebElement element = driver.findElement(by);
+		
+		return element.isDisplayed();
+	}
 	
 	
 	/** 根据元素来获取此元素的定位值 */
@@ -440,10 +446,18 @@ public class AppiumUtil {
 	}
 	
 	/**滑动*/
-	public void swipe(int beginX,int beginY,int endX,int endY){
-		TouchAction tAction=new TouchAction(driver);
+	public void swipe(float beginX,float beginY,float endX,float endY,int duration){
+//		TouchAction tAction=new TouchAction(driver);
 		try{
-		tAction.press(beginX,beginY).moveTo(endX,endY).release().perform();
+//		tAction.press(beginX,beginY).moveTo(endX,endY).release().perform();
+		int size[] = getSize();
+		int startX = (int) (size[0]*beginX);
+		int startY = (int) (size[1]*beginY);
+		int stopX = (int) (size[0]*endX);
+		int stopY = (int) (size[1]*endY);
+		logger.info("滑动起始坐标：（"+startX+","+startY+"),滑动结束坐标：（"+stopX+","+stopY+")");
+		driver.swipe(startX, startY, stopX, stopY, duration);
+		logger.info("滑动结束");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

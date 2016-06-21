@@ -16,8 +16,7 @@
     <parameter name="iosAppPath" value="res/app/ios/xxx.app" />
 	<!--app的包  -->
 	<parameter name="appPackage" value="com.huangtaiji.client" />
-	<!--app的 activity  -->
-	<parameter name="appActivity" value="com.huangtaiji.client.ui.MainActivity" />
+
 	<!--是否支持unicode输入设置为true可以输入中文字符  -->
 	<parameter name="unicodeKeyboard" value="true" />
 	<!-- 重置键盘输入法 -->
@@ -36,7 +35,7 @@
 		
 	<test name="搜索" preserve-order="true">
 		<classes>
-			<class name="com.appium.htj.testcase.Guide.Guide_001_Scroll_Test" />
+			<class name="com.appium.htj.testcases.Guide.Guide_001_Scroll_Test" />
 		</classes>
 	</test> 
 
