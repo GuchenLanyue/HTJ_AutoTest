@@ -1,4 +1,4 @@
-package com.appium.htj.testcase.Guide;
+package com.appium.htj.testcases.Guide;
 
 import java.util.Map;
 
