@@ -46,26 +46,18 @@ public class GuidePageHelper {
 	}
 	
 	/**判断引导页是否显示，显示则滑动*/
-	public static void guideIsDisplayed(AppiumUtil appiumUtil){
+	public static void checkImageDisplayed(AppiumUtil appiumUtil){
 		boolean isDesplayed = appiumUtil.elementIsdisplayed(Guide.Guide_image_image);
-		for(int i = 0 ; ; i++ ){
-			if (isDesplayed) {
-				logger.info("元素"+ Guide.Guide_image_image +"显示");
-				swipeGuide(appiumUtil);
-				guideClick(appiumUtil);
-			}else{
-				logger.info("引导页滑动完毕");
-				return;
+		if (isDesplayed) {
+			for(int i = 0 ;i < 5 ; i++ ){
+			logger.info("元素"+ Guide.Guide_image_image +"显示");
+			swipeGuide(appiumUtil);
+			guideClick(appiumUtil);
 			}
+			logger.info("引导页滑动完毕");
+		}else{
+			logger.info("引导页没有显示");
 			return;
 		}
 	}
-	
-//	/**验证首页部分文本内容*/
-//	public static void checkHomeUIText(AppiumUtil appiumUtil,String expected){
-//		logger.info("正在验证APP首页文本内容是否正确");
-//		appiumUtil.isTextCorrect(appiumUtil.getText(HomePage.HP_LINK_STORY), expected);
-//		logger.info("验证APP首页文本内容完成");
-//	}
-
 }
