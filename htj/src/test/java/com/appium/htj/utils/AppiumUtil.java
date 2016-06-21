@@ -24,6 +24,7 @@ import io.appium.java_client.MultiTouchAction;
 import io.appium.java_client.NoSuchContextException;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.ios.IOSDriver;
 
 /**
@@ -33,7 +34,7 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class AppiumUtil {
 	
-	public  AppiumDriver<WebElement> driver; 
+	public  AppiumDriver<WebElement> driver;
 	public 	ITestResult it;
 	/**定义日志输出对象*/
 	public static Logger logger = Logger.getLogger(AppiumUtil.class);
@@ -423,9 +424,7 @@ public class AppiumUtil {
 		}catch(NoSuchElementException nee){
 			
 			return false;
-		}
-		
-		
+		}		
 	}
 	
 	/**长按操作*/
@@ -441,7 +440,7 @@ public class AppiumUtil {
         int height = driver.manage().window().getSize().height;
         size[0] = width;
         size[1] = height;
-        
+        logger.info("屏幕分辨率为："+height+"*"+width);
 		return size;
 	}
 	
@@ -499,6 +498,13 @@ public class AppiumUtil {
 		driver.runAppInBackground(runTimes);
 		
 	}
+	
+//	/**返回键*/
+//	public void goBack(){
+//		logger.info("点击返回键");
+//		driver.pressKeyCode(AndroidKeyCode.BACK);
+//		
+//	}
 	
 	/**收起键盘*/
 	public void hideKeyboard(){

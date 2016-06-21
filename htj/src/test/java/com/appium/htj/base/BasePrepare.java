@@ -76,7 +76,12 @@ public class BasePrepare {
              * 
              * 
              * */
-            moduleName = className.substring(33, className.lastIndexOf(".")); // 取到模块的名称
+        	String nameArray[] = null;
+        	nameArray = className.split("\\.");
+        	String caseArray[] = null;
+        	caseArray = nameArray[nameArray.length-1].split("_");
+        	moduleName = caseArray[2];//取到模块的名称
+//            moduleName = className.substring(33, className.lastIndexOf(".")); // 取到模块的名称
         }
         if (underlineIndexNum > 0) {
             //这个分析方法和moduleName的分析方法一样

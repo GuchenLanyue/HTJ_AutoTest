@@ -9,7 +9,7 @@ import com.appium.htj.base.BasePrepare;
 import com.appium.htj.pageshelper.GuidePageHelper;
 import com.sun.jna.platform.win32.Guid;;
 
-public class Guide_001_Scroll_Test extends BasePrepare{
+public class GuidePage_001_Scroll_Test extends BasePrepare{
 	
 //	@Test(dataProvider="testData")
 //	public void uiCheck(Map<String, String> data){

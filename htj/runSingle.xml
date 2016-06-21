@@ -35,7 +35,7 @@
 		
 	<test name="搜索" preserve-order="true">
 		<classes>
-			<class name="com.appium.htj.testcases.Guide.Guide_001_Scroll_Test" />
+			<class name="com.appium.htj.testcases.Login.LoginPage_001_Login_Test" />
 		</classes>
 	</test> 
 
