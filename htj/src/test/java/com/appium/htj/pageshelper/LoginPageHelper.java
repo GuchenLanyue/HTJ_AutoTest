@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 
 import com.appium.htj.pages.LoginPage;
 import com.appium.htj.utils.AppiumUtil;
+import com.sun.jna.platform.win32.WinDef.BYTE;
 
 public class LoginPageHelper {
 	

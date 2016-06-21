@@ -15,16 +15,16 @@ public class LoginPage_001_Login_Test extends BasePrepare{
 		LoginPageHelper.waitForLoginUI(appiumUtil, elementTimeOut);
 		
 		/**检查title文本*/
-		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_TextView_Title, "Name", data.get("Title"));
+		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_TextView_Title, "name", data.get("Title"));
 		
 		/**检查accept文本*/
-		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_TextView_Accept, "Name", data.get("Accept"));
+		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_TextView_Accept, "name", data.get("Accept"));
 
 		/**检查用户协议文本*/
-		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_TextView_Protocol, "Name", data.get("Protocol"));
+		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_TextView_Protocol, "name", data.get("Protocol"));
 		
 		/**检查下一步按钮文本*/
-		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_Button_Next, "Name", data.get("Next"));
+		LoginPageHelper.checkText(appiumUtil, LoginPage.Login_Button_Next, "name", data.get("Next"));
 		
 //		/**点击用户协议*/
 //		LoginPageHelper.loginPageClick(appiumUtil, LoginPage.Login_TextView_Protocol);
