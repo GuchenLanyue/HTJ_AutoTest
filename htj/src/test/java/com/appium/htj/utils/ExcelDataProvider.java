@@ -46,7 +46,7 @@ public class ExcelDataProvider implements Iterator<Object[]> {
 		try {
 			//文件路径
 			path = "data/" + moduleName + ".xls";
-			 inputStream = new FileInputStream(path);
+			inputStream = new FileInputStream(path);
 
 			book = Workbook.getWorkbook(inputStream);
 			// sheet = book.getSheet(methodname);

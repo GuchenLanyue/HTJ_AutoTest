@@ -1,4 +1,4 @@
-package com.appium.htj.base;
+package com.appium.htj.base.api;
 
 import java.io.File;
 import java.io.FileInputStream;

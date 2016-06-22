@@ -1,4 +1,4 @@
-package com.appium.htj.base;
+package com.appium.htj.base.api;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -26,7 +26,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.appium.htj.base.DataReader;
+import com.appium.htj.base.api.DataReader;
 
 public class httpRequest {
 	
@@ -49,7 +49,7 @@ protected List<String> list = new ArrayList<>();
 protected HashMap<String, String> bodyMap = new HashMap<String,String>();
 protected List<NameValuePair> data = null;
 
-protected String path = "/robotium/data.xls";
+protected String path = "data/api.xls";
 protected DataReader dataReader;
 protected HashMap<String, HashMap<String, String>> map = new HashMap<String, HashMap<String, String>>();
 protected HashMap<String, String> mylist = new HashMap<String, String>();
@@ -188,7 +188,6 @@ public httpRequest(String testCase) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-
 }
 
 }

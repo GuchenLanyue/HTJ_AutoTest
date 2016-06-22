@@ -1,10 +1,16 @@
-package com.appium.htj.base;
+package com.appium.htj.base.api;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 //import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+
+import org.apache.log4j.Logger;
+
+import com.appium.htj.utils.ExcelDataProvider;
+
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -17,6 +23,8 @@ private Sheet sheet = null;
 private String path;
 private HashMap<String, HashMap<String, String>> map= new HashMap<String, HashMap<String, String>>();
 private HashMap<String, String> titleMap = new HashMap< String , String>();
+public static Logger logger = Logger.getLogger(ExcelDataProvider.class.getName());
+
 public DataReader() {
 	super();
 }
@@ -29,21 +37,20 @@ public DataReader(String path,String sheetName,int TitleRows,int ValueCol) {
 
 public void readCase(String dataPath,String sheetName,int titleRows,int ValueCol){
 
-	path = dataPath;
-	File sdCardDir=new File("/sdcard");
-	String filepath = sdCardDir+path;
+//	path = dataPath;
+//	File sdCardDir=new File("/sdcard");
+	
+//	String filepath = sdCardDir+path;
 	
 	try {
-		fs = new FileInputStream(filepath);
+		fs = new FileInputStream(dataPath);
 		workbook = Workbook.getWorkbook(fs);
-	} catch (BiffException e) {
+	} catch (BiffException | IOException e) {
 		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
+		logger.info("没有找到"+dataPath+"文件");
 		e.printStackTrace();
 	}
-	
+
 	sheet = workbook.getSheet(sheetName);
 	
 	for (int row = titleRows; row < sheet.getRows(); row++) {

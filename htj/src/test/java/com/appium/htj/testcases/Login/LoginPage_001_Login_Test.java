@@ -1,9 +1,13 @@
 package com.appium.htj.testcases.Login;
 
+import java.io.IOException;
 import java.util.Map;
+
+import org.json.JSONException;
 import org.testng.annotations.Test;
 
 import com.appium.htj.base.BasePrepare;
+import com.appium.htj.base.api.LoginSuccess;
 import com.appium.htj.pages.LoginPage;
 import com.appium.htj.pageshelper.LoginPageHelper;
 
@@ -47,6 +51,16 @@ public class LoginPage_001_Login_Test extends BasePrepare{
 		
 		/**点击下一步按钮*/
 		LoginPageHelper.loginPageClick(appiumUtil, LoginPage.Login_Button_Next);
+		
+//		API测试代码测试
+		LoginSuccess loginSuccess;
+		try {
+			loginSuccess = new LoginSuccess(1);
+			logger.info("Token:"+loginSuccess.getToken());
+		} catch (JSONException | IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			Thread.sleep(10000);
