@@ -40,7 +40,7 @@ public class CreateExcelForResult{
 	/**excel工作簿*/
 	static XSSFWorkbook workbook = null;
 	/**log目录,生成的log会存储到此目录中*/
-	static File logDir = new File("./result/log/");
+	static File logDir = new File("./result/logs/");
 	
 	/**
 	 * @author wangyang

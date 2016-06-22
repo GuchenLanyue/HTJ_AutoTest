@@ -28,7 +28,7 @@
 	<!-- 进程等待1秒中的控制时间，单位是秒 -->
 	<parameter name="sleepTime" value="1" />
 	<!-- 页面元素15秒不出现超时时间 -->
-	<parameter name="elementTimeOut" value="15" />
+	<parameter name="elementTimeOut" value="70" />
     <!-- app属性文件 -->
 	<parameter name="appFilePath" value="res/properties/app.properties" />
 

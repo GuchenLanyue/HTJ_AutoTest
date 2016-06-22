@@ -12,6 +12,7 @@ import com.appium.htj.utils.AppiumUtil;
  * */
 
 public class InitPageHelper {
+	
 	public static Logger logger = Logger.getLogger(InitPageHelper.class);
 	
 	/**

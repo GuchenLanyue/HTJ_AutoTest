@@ -54,6 +54,11 @@ protected DataReader dataReader;
 protected HashMap<String, HashMap<String, String>> map = new HashMap<String, HashMap<String, String>>();
 protected HashMap<String, String> mylist = new HashMap<String, String>();
 
+/**
+ * @author sam
+ * @deprecated 验证http请求类型，更具请求方式调用不通的方法
+ * @param testCase excel中testCase的值
+ * */
 public void request(String testCase) throws JSONException, ClientProtocolException, IOException {
 	dataReader = new DataReader(path,"API",1,0);
 	map = dataReader.getMap();
@@ -66,6 +71,11 @@ public void request(String testCase) throws JSONException, ClientProtocolExcepti
 	}
 }
 
+/**
+ * @author sam
+ * @deprecated 发送post请求
+ * @param list excel中指定一行testCase的值，由request方法传入
+ * */
 public void post(HashMap<String, String> list) throws JSONException, ClientProtocolException, IOException{
 	
 	myList = list;
@@ -105,6 +115,10 @@ public void post(HashMap<String, String> list) throws JSONException, ClientProto
 	response.getEntity().consumeContent();
 }
 
+/**
+ * @author sam
+ * @deprecated 拆分body字符串
+ * */
 public void splitBody() {
 //	HashMap<String, String> parameterMap = new HashMap<String,String>();
 	String[] bodyArray = null;
@@ -147,6 +161,10 @@ public void setDeviceID(int deviceID) {
 	bodyMap.put("device_id", String.valueOf(deviceID));
 }
 
+/**
+ * @author sam
+ * @deprecated 以httpclient的方式存入body数据
+ * */
 public void setBody() {
 	try {
 		LoginSuccess login = new LoginSuccess(1);

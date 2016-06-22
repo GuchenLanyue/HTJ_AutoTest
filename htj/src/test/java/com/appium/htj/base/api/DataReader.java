@@ -25,22 +25,33 @@ private HashMap<String, HashMap<String, String>> map= new HashMap<String, HashMa
 private HashMap<String, String> titleMap = new HashMap< String , String>();
 public static Logger logger = Logger.getLogger(ExcelDataProvider.class.getName());
 
+/**
+ * @author sam
+ * @description 读取excel数据
+ * */
 public DataReader() {
 	super();
 }
 
+/**
+ * @author sam
+ * @description 读取excel数据
+ * */
 public DataReader(String path,String sheetName,int TitleRows,int ValueCol) {
 	this();
 	readCase(path,sheetName, TitleRows, ValueCol);
 	readTitle(TitleRows);
 }
 
+/**
+ * @author sam
+ * @description 读取case数据
+ * @param dataPath excel存放路径
+ * @param sheetName excel sheet名称
+ * @param titleRows excel title所占的行数
+ * @param ValueCol excel 中case开始的行数
+ * */
 public void readCase(String dataPath,String sheetName,int titleRows,int ValueCol){
-
-//	path = dataPath;
-//	File sdCardDir=new File("/sdcard");
-	
-//	String filepath = sdCardDir+path;
 	
 	try {
 		fs = new FileInputStream(dataPath);
@@ -66,8 +77,13 @@ public void readCase(String dataPath,String sheetName,int titleRows,int ValueCol
 	}
 }
 
-public void readTitle(int titileRows) {
-	if (titileRows == 2) {
+/**
+ * @author sam
+ * @description 读取excel title数据
+ * @param titleRows excel 中title所占的行数
+ * */
+public void readTitle(int titleRows) {
+	if (titleRows == 2) {
 		Cell[] cell = sheet.getRow(0);
 		for (int i = 0; i < cell.length; i++) {
 			titleMap.put(sheet.getCell(i,0).getContents(), sheet.getCell(i,1).getContents());
@@ -80,10 +96,18 @@ public void readTitle(int titileRows) {
 	}
 }
 
+/**
+ * @author sam
+ * @description get excel title数据
+ * */
 public HashMap<String, String> getTitle(){
 	return titleMap;
 }
 
+/**
+ * @author sam
+ * @description get excel case数据
+ * */
 public HashMap<String, HashMap<String, String>> getMap(){
 	return map;
 }

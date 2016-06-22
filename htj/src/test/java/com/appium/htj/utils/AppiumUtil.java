@@ -270,6 +270,8 @@ public class AppiumUtil {
 	
 	/**
 	 * 获得元素 属性的文本
+	 * @param elementLocator 元素定位str
+	 * @param attribute 元素属性
 	 * */
 	public String getAttributeText(By elementLocator, String attribute) {
 		return findElement(elementLocator).getAttribute(attribute).trim();
@@ -298,6 +300,8 @@ public class AppiumUtil {
 	
 	/**
 	 * 判断文本是不是和需求要求的文本一致
+	 * @param actual 显示文本
+	 * @param expected 期望文本
 	 * **/
 	public void isTextCorrect(String actual, String expected) {
 		try {
@@ -364,10 +368,10 @@ public class AppiumUtil {
 		try {
 			Assert.assertTrue(actual.contains(expect));
 		} catch (AssertionError e) {
-			logger.error("The [" + actual + "] is not contains [" + expect + "]");
-			Assert.fail("The [" + actual + "] is not contains [" + expect + "]");
+			logger.error("实际显示文本 [" + actual + "] 不包含 [" + expect + "]");
+			Assert.fail("实际显示文本 [" + actual + "] 不包含 [" + expect + "]");
 		}
-		logger.info("The [" + actual + "] is contains [" + expect + "]");
+		logger.info("实际显示文本 [" + actual + "] 包含 [" + expect + "]");
 	}
 	
 	/**跳转到webview页面*/

@@ -2,6 +2,11 @@ package com.appium.htj.pages;
 
 import org.openqa.selenium.By;
 
+/**
+ * @author sam
+ * @description 登录页
+ * */
+
 public class LoginPage {
 	/**@author Sam
 	 * @description APP引导页

@@ -1,30 +1,23 @@
 package com.appium.htj.testcases.Guide;
 
-import java.util.List;
 import java.util.Map;
 
 import org.testng.annotations.Test;
 
 import com.appium.htj.base.BasePrepare;
 import com.appium.htj.pageshelper.GuidePageHelper;
-import com.sun.jna.platform.win32.Guid;;
 
-public class GuidePage_001_Scroll_Test extends BasePrepare{
-	
-//	@Test(dataProvider="testData")
-//	public void uiCheck(Map<String, String> data){
-//		/**滑动引导页*/
-//		GuidePageHelper.scrollGuide(appiumUtil);
-//	}
-	
-	@Test
-	public void guide(){
+public class GuidePage_001_Scroll_Test extends BasePrepare{	
+	@Test(dataProvider = "testData")
+	public void guide(Map<String, String> data){
 		
 		/**等待引导页显示*/
 		GuidePageHelper.waitGuideUI(appiumUtil, elementTimeOut);
 		
+		/**获取引导页数量*/
+		int imgAccount = Integer.getInteger(data.get("ImgAccount"));
 		/**检查引导页图片是否显示*/
-		GuidePageHelper.checkImageDisplayed(appiumUtil);
+		GuidePageHelper.checkImageDisplayed(appiumUtil,imgAccount);
 		
 		try {
 			Thread.sleep(10000);

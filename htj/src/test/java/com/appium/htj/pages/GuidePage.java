@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
  * @description APP引导页
  * */
 
-public class Guide {
+public class GuidePage {
 
 	 /**引导页ViewPager*/
 	 public static final By Guide_image_pager = By.id("com.huangtaiji.client:id/vPager");
