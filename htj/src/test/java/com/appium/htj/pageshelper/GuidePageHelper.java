@@ -41,11 +41,16 @@ public class GuidePageHelper {
 	/**判断引导页是否显示，显示则滑动*/
 	public static void checkImageDisplayed(AppiumUtil appiumUtil,int imgAccount){
 		boolean isDesplayed = appiumUtil.elementIsdisplayed(GuidePage.Guide_image_image);
+		logger.info("元素"+ GuidePage.Guide_image_image +"显示");
 		if (isDesplayed) {
 			for(int i = 0 ;i < imgAccount-1 ; i++ ){
-			logger.info("元素"+ GuidePage.Guide_image_image +"显示");
 			swipeGuide(appiumUtil);
-			guideClick(appiumUtil);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			}
 			logger.info("引导页滑动完毕");
 		}else{

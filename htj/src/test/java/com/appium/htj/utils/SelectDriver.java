@@ -44,8 +44,10 @@ public class SelectDriver {
 	public boolean unicodeKeyboard;
 	//android独有 - 是否重置键盘，如果设置了unicodeKeyboard键盘，可以将此参数设置为true，然后键盘会重置为系统默认的
 	public boolean resetKeyboard;
-	//是否覆盖已有的seesssion，这个用于多用例执行，如果不设置的话，会提示前一个session还没有结束，用例就不能继续执行了
+	//是否覆盖已有的session，这个用于多用例执行，如果不设置的话，会提示前一个session还没有结束，用例就不能继续执行了
 	public boolean sessionOverride;
+	//设置session超时时间
+	public int newCommandTimeout;
 	//暂停的等待时间
 	public int sleepTime;
 	//元素等待超时时间
@@ -84,6 +86,8 @@ public class SelectDriver {
 	      resetKeyboard = Boolean.parseBoolean(context.getCurrentXmlTest().getParameter("resetKeyboard"));
 	      //通过testng的xml文件获取sessionOverride参数值，并赋给  sessionOverride变量
 	      sessionOverride = Boolean.parseBoolean(context.getCurrentXmlTest().getParameter("sessionOverride"));
+	      //通过testng的xml文件获取session超时时间
+	      newCommandTimeout = Integer.valueOf(context.getCurrentXmlTest().getParameter("newCommandTimeout"));
 	      //通过testng的xml文件获取sleepTime参数值，并赋给  sleepTime变量
 	      sleepTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("sleepTime"));
 	      //通过testng的xml文件获取elementTimeOut参数值，并赋给  elementTimeOut变量
@@ -99,11 +103,12 @@ public class SelectDriver {
 	      capabilities.setCapability("platformVersion",platformVersion);
 	      capabilities.setCapability("deviceName",deviceName);
 	      capabilities.setCapability("sessionOverride", sessionOverride);
+	      capabilities.setCapability("newCommandTimeout",newCommandTimeout);
 	      //如果测试平台是android的话，执行下面这个if语句内容
 		if(platformName.equalsIgnoreCase("android")){
-				/**
-				 * 设置和android  测试相关的capability并实例化driver对象
-				 * */
+			/**
+			 * 设置和android  测试相关的capability并实例化driver对象
+			 * */
 		      File app = new File(classpathRoot, androidAppPath);
 		      capabilities.setCapability("app", app.getAbsolutePath());
 		      capabilities.setCapability("unicodeKeyboard", unicodeKeyboard);
@@ -111,6 +116,7 @@ public class SelectDriver {
 		      capabilities.setCapability("automationName",automationName);
 		      capabilities.setCapability("appPackage", appPackage);
 		      capabilities.setCapability("appActivity", appActivity);
+		      capabilities.setCapability("stopAppOnReset", "true");
 		      driver = appiumUtil.getDriver(serverURL, capabilities,platformName);
 		      testContext.setAttribute("APPIUM_DRIVER", driver);
 		      logger.info(PropertiesDataProvider.getTestData(appFilePath, appPackage)+"已经启动");

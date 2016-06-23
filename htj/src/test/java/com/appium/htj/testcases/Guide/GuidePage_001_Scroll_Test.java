@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import com.appium.htj.base.BasePrepare;
 import com.appium.htj.pageshelper.GuidePageHelper;
+import com.appium.htj.utils.PropertiesDataProvider;
 
 public class GuidePage_001_Scroll_Test extends BasePrepare{	
 	@Test(dataProvider = "testData")
@@ -15,15 +16,16 @@ public class GuidePage_001_Scroll_Test extends BasePrepare{
 		GuidePageHelper.waitGuideUI(appiumUtil, elementTimeOut);
 		
 		/**获取引导页数量*/
-		int imgAccount = Integer.getInteger(data.get("ImgAccount"));
+		String accountStr = data.get("ImgAccount");
+		
+		/**将excle中获取的String类型的值转为int*/
+		int imgAccount = Integer.valueOf(accountStr).intValue();
+		
 		/**检查引导页图片是否显示*/
 		GuidePageHelper.checkImageDisplayed(appiumUtil,imgAccount);
 		
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		/**点击引导页图片*/
+		GuidePageHelper.guideClick(appiumUtil);
+		
 	}
 }
