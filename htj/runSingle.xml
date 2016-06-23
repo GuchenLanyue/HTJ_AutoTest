@@ -35,7 +35,7 @@
 
 	<test name="引导页" preserve-order="true">
 		<classes>
-			<class name="com.appium.htj.testcases.Guide.GuidePage_001_guide_Test" />
+			<class name="com.appium.htj.testcases.Guide.GuidePage_001_Scroll_Test" />
 		</classes>
 	</test> 
 
