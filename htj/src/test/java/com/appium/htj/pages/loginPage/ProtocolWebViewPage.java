@@ -1,4 +1,4 @@
-package com.appium.htj.pages;
+package com.appium.htj.pages.loginPage;
 
 public class ProtocolWebViewPage {
 	

@@ -31,14 +31,13 @@
 	<parameter name="elementTimeOut" value="70" />
     <!-- app属性文件 -->
 	<parameter name="appFilePath" value="res/properties/app.properties" />
+	
 
-		
-	<test name="搜索" preserve-order="true">
+	<test name="引导页" preserve-order="true">
 		<classes>
-			<class name="com.appium.htj.testcases.Login.LoginPage_001_Login_Test" />
+			<class name="com.appium.htj.testcases.Guide.GuidePage_001_guide_Test" />
 		</classes>
 	</test> 
-
 
 	
 		<listeners>

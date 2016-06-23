@@ -3,7 +3,7 @@ package com.appium.htj.pageshelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
-import com.appium.htj.pages.VerificationPage;
+import com.appium.htj.pages.loginPage.VerificationPage;
 import com.appium.htj.utils.AppiumUtil;
 
 public class VerificationPageHelper {

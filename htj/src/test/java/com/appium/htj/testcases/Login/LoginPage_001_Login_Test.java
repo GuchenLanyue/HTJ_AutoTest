@@ -5,10 +5,10 @@ import java.util.Map;
 import org.testng.annotations.Test;
 
 import com.appium.htj.base.BasePrepare;
-import com.appium.htj.pages.AdvertisingPage;
-import com.appium.htj.pages.InviteCodePage;
-import com.appium.htj.pages.LoginPage;
-import com.appium.htj.pages.ProtocolWebViewPage;
+import com.appium.htj.pages.loginPage.AdvertisingPage;
+import com.appium.htj.pages.loginPage.InviteCodePage;
+import com.appium.htj.pages.loginPage.LoginPage;
+import com.appium.htj.pages.loginPage.ProtocolWebViewPage;
 import com.appium.htj.pageshelper.AdvertisingPageHelper;
 import com.appium.htj.pageshelper.InviteCodePageHelper;
 import com.appium.htj.pageshelper.LoginPageHelper;

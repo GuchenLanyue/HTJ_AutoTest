@@ -1,6 +1,6 @@
 package com.appium.htj.pageshelper;
 
-import com.appium.htj.pages.ProtocolPage;
+import com.appium.htj.pages.loginPage.ProtocolPage;
 import com.appium.htj.utils.AppiumUtil;
 
 public class ProtocolPageHelper {

@@ -2,7 +2,7 @@ package com.appium.htj.pageshelper;
 
 import org.apache.log4j.Logger;
 
-import com.appium.htj.pages.GuidePage;
+import com.appium.htj.pages.loginPage.GuidePage;
 import com.appium.htj.utils.AppiumUtil;
 /**
  * 首页帮助类

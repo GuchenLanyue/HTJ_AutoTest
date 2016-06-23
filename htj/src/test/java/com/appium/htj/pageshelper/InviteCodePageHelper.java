@@ -3,7 +3,7 @@ package com.appium.htj.pageshelper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
-import com.appium.htj.pages.InviteCodePage;
+import com.appium.htj.pages.loginPage.InviteCodePage;
 import com.appium.htj.utils.AppiumUtil;
 
 /**
