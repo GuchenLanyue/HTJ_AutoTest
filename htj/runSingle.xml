@@ -16,7 +16,9 @@
     <parameter name="iosAppPath" value="res/app/ios/xxx.app" />
 	<!--app的包  -->
 	<parameter name="appPackage" value="com.huangtaiji.client" />
-
+	
+	<!--Appium的默认的命令间隔时间是60s,如果在60s内没有找到，就会自动退出。  -->
+	<parameter name="newCommandTimeout" value="240"/>
 	<!--是否支持unicode输入设置为true可以输入中文字符  -->
 	<parameter name="unicodeKeyboard" value="true" />
 	<!-- 重置键盘输入法 -->
