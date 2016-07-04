@@ -9,7 +9,7 @@
 	<!-- 平台版本 -->
 	<parameter name="platformVersion" value="4.4.2" />
 	<!-- 设备名字，可随意起名字，但是要有意义 -->
-	<parameter name="deviceName" value="SM-N900P" />
+	<parameter name="deviceName" value="MX3" />
 	<!-- android app路径 -->
 	<parameter name="androidAppPath" value="res/app/android/HTJ.apk" />
 	<!-- ios app路径 -->
@@ -27,7 +27,7 @@
 	<!-- 重置键盘输入法 -->
 	<parameter name="resetKeyboard" value="true" />
 	<!--设备UDID iPhone真机使用或者android并行测试可以使用 -->
-	<parameter name="udid" value="32abb2c4" />
+	<parameter name="udid" value="353ACHP7Q28P" />
 	<!-- 设置为true之后会覆盖当前session -->
 	<parameter name="sessionOverride" value="true" />
 	<!-- 进程等待1秒中的控制时间，单位是秒 -->

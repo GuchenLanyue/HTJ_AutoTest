@@ -9,7 +9,7 @@
 	<!-- 平台版本 -->
 	<parameter name="platformVersion" value="4.4.4" />
 	<!-- 设备名字，可随意起名字，但是要有意义 -->
-	<parameter name="deviceName" value="SM-N900P" />
+	<parameter name="deviceName" value="MX3" />
 	<!-- android app路径 -->
     <parameter name="androidAppPath" value="res/app/android/HTJ.apk" />
     <!-- ios app路径 -->
