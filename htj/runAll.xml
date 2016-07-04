@@ -18,7 +18,7 @@
 	<parameter name="appPackage" value="com.huangtaiji.client" />
 	
 	<!--app的 activity -->
-	<!--parameter name="appActivity" value="com.microsoft.clients.bing.app.MainActivity" />  -->
+	<parameter name="appActivity" value="com.huangtaiji.client.ui.GuideActivity" />
 	
 	<!--Appium的默认的命令间隔时间是60s,如果在60s内没有找到，就会自动退出。  -->
 	<parameter name="newCommandTimeout" value="240"/>
