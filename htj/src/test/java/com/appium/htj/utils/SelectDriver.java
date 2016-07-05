@@ -115,7 +115,7 @@ public class SelectDriver {
 		      capabilities.setCapability("resetKeyboard", resetKeyboard);
 		      capabilities.setCapability("automationName",automationName);
 		      capabilities.setCapability("appPackage", appPackage);
-		      capabilities.setCapability("appActivity", appActivity);
+//		      capabilities.setCapability("appActivity", appActivity);
 		      capabilities.setCapability("stopAppOnReset", "true");
 		      driver = appiumUtil.getDriver(serverURL, capabilities,platformName);
 		      testContext.setAttribute("APPIUM_DRIVER", driver);

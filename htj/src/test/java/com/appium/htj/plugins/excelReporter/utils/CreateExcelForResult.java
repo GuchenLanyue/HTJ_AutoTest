@@ -381,7 +381,7 @@ public class CreateExcelForResult{
  					workbook.getSheet(function).getRow(count+2+failTestNum).getCell(1).setCellValue(new XSSFRichTextString(caseName));
  					workbook.getSheet(function).getRow(count+2+failTestNum).getCell(2).setCellValue(new XSSFRichTextString("Skipped"));
 					workbook.getSheet(function).getRow(count+2+failTestNum).getCell(3).setCellFormula
-					("HYPERLINK(\"" +new File("result/log/"+functionPack+"/"+caseName+".log").getAbsolutePath()+ "\",\"" +caseName+ ".log\")");
+					("HYPERLINK(\"" +new File("result/logs/"+functionPack+"/"+caseName+".log").getAbsolutePath()+ "\",\"" +caseName+ ".log\")");
 					xcs.setFillForegroundColor((short) 13);// 设置背景色 -黄色
 					setCellBorder(workbook, xcs);
 			        workbook.getSheet(function).getRow(count+2+failTestNum).getCell(1).setCellStyle(setContentCellBorder(workbook));
@@ -410,7 +410,7 @@ public class CreateExcelForResult{
       					workbook.getSheet(function).getRow(count+2+failTestNum+skipTestNum).getCell(1).setCellValue(new XSSFRichTextString(caseName));
       					workbook.getSheet(function).getRow(count+2+failTestNum+skipTestNum).getCell(2).setCellValue(new XSSFRichTextString("Passed"));
     					workbook.getSheet(function).getRow(count+2+failTestNum+skipTestNum).getCell(3).setCellFormula
-    					("HYPERLINK(\"" +new File("result/log/"+functionPack+"/"+caseName+".log").getAbsolutePath()+ "\",\"" +caseName+ ".log\")");
+    					("HYPERLINK(\"" +new File("result/logs/"+functionPack+"/"+caseName+".log").getAbsolutePath()+ "\",\"" +caseName+ ".log\")");
     					xcs.setFillForegroundColor((short) 57);// 设置背景色 -绿色
     					setCellBorder(workbook, xcs);
     			        workbook.getSheet(function).getRow(count+2+failTestNum+skipTestNum).getCell(1).setCellStyle(setContentCellBorder(workbook));

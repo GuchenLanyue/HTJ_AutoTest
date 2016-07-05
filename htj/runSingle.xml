@@ -16,9 +16,10 @@
     <parameter name="iosAppPath" value="res/app/ios/xxx.app" />
 	<!--app的包  -->
 	<parameter name="appPackage" value="com.huangtaiji.client" />
+	
 	<!--app的 activity -->
-	<!--  parameter name="appActivity" value="com.huangtaiji.client.ui.GuideActivity" />
-	-->
+	<!-- <parameter name="appActivity" value="com.huangtaiji.client.ui.MainActivity" /> -->
+	
 	<!--Appium的默认的命令间隔时间是60s,如果在60s内没有找到，就会自动退出。  -->
 	<parameter name="newCommandTimeout" value="240"/>
 	<!--是否支持unicode输入设置为true可以输入中文字符  -->
@@ -49,11 +50,11 @@
 			<listener class-name="com.appium.htj.plugins.excelReporter.TestResultListener" />
 			<listener class-name="com.appium.htj.plugins.excelReporter.ExcelReporter" />
 
-	    <!-- html报告
-				<listener class-name="com.young.appiumcombat.plugins.htmlReporter.TestResultListener" />
-				<listener class-name="com.young.appiumcombat.plugins.htmlReporter.RetryListener" />
-				<listener class-name="com.young.appiumcombat.plugins.htmlReporter.PowerEmailableReporter" />
-	     -->
+	    <!-- html报告-->
+				<listener class-name="com.appium.htj.plugins.htmlReporter.TestResultListener" />
+				<listener class-name="com.appium.htj.plugins.htmlReporter.RetryListener" />
+				<listener class-name="com.appium.htj.plugins.htmlReporter.PowerEmailableReporter" />
+	     
 	</listeners>
 
 </suite> 
